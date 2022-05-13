@@ -1,4 +1,66 @@
-// FUNCTIONS
+// ACTIVITY 1
+// Take this code and turn it into arrow function
+// syntax:
+
+const factorial = (n) => {
+    if ((n === 0 ) || (n === 1)) {
+        return 1;
+    } else {
+        return (n * factorial(n-1));
+    }
+}
+
+console.log(factorial(33));
+
+// --------------------------------------------
+
+// ACTIVITY 2
+
+// Edit the below snippet to include two parameters and a  running order count updated when the function is called:
+
+let orderCount = 0;
+
+const takeOrder = (toppingOne, toppingTwo) => {
+    console.log(`Pizza with ${toppingOne} and ${toppingTwo}`);
+    return orderCount++;
+}
+
+takeOrder("pineapple", "ham");
+takeOrder("tuna", "pickle");
+takeOrder("octopus", "sweetcorn");
+
+console.log(orderCount);
+
+// --------------------------------------------
+
+// ACTIVITY 3
+
+// Cash machine time! 
+// Let’s create one that:
+// > Dispenses cash if your pin number is correct and your
+// balance is equal to, or more than, the amount you’re
+// trying to withdraw!
+
+const correctPin = 1010
+let bankBalance = 500
+
+function bankTrans (pinEnter, withdrawAmount) {
+if (pinEnter == correctPin) {
+        if (withdrawAmount <= bankBalance){
+            bankBalance = (bankBalance-withdrawAmount);
+            console.log(`You have withdrawn ${withdrawAmount}. Your remaining balance is ${bankBalance}`);
+        } else if (withdrawAmount > bankBalance){
+            console.log(`Your withdraw amount exceeds your balance`);
+    }
+    }
+else {console.log("You've entered the incorrect pin number")}
+    }
+
+bankTrans(3498, 200)
+bankTrans(1010, 50)
+bankTrans(1010, 1000)
+
+// -----------------LECTURE NOTES: FUNCTIONS-----------------
 // --------------------------------------------
 // const pressGrindBeans = () => {
 //     console.log("Grinding for 20 seconds");
@@ -73,20 +135,20 @@
 // --------------------------------------------
 // Function Declaration
 
-function square(number) {
-    return number * number;
-};
+// function square(number) {
+//     return number * number;
+// };
 
-square(5);
+// square(5);
 
-// Output: 25
+// // Output: 25
 
-// Function Expression
+// // Function Expression
 
-const square = function (number) {
-    return number * number;
-};
+// const square = function (number) {
+//     return number * number;
+// };
 
-square(5);
+// square(5);
 
-// Output: 25
+// // Output: 25

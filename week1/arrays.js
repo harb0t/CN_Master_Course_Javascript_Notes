@@ -1,3 +1,5 @@
+// ------------LECTURE NOTES: ARRAYS -----------
+
 let coffeeOrder =[
     "Alex - Cortado",
     "Ben - Cortado",
